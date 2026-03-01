@@ -115,6 +115,13 @@ const Video = ({ label, sub }) => (
   </div>
 );
 
+const YT = ({ id }) => (
+  <div style={{ margin: "32px 0", width: "100%", aspectRatio: "16/9", position: "relative", overflow: "hidden", background: C.dark }}>
+    <iframe src={`https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`} title="Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
+      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }} />
+  </div>
+);
+
 const Dots = ({ current, total }) => (
   <div style={{ display: "flex", gap: "8px", justifyContent: "center", marginBottom: "28px" }}>
     {Array.from({ length: total }).map((_, i) => (
@@ -259,7 +266,7 @@ const Intro = ({ onNext, onBack }) => (
       <FadeIn delay={200}>
         <h2 style={{ fontFamily: hf, fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 300, color: C.teal, lineHeight: 1.2, marginBottom: "12px" }}>Why This <span style={{ fontWeight: 600 }}>Matters</span></h2>
       </FadeIn>
-      <FadeIn delay={400}><Video label="A Word Before We Start" sub="2 min" /></FadeIn>
+      <FadeIn delay={400}><YT id="OSGnv9ItYTw" /></FadeIn>
       <FadeIn delay={600}>
         <p style={{ fontFamily: bf, fontSize: "17px", color: C.med, lineHeight: 1.8, marginBottom: "24px" }}>Most leaders who want to change their culture skip straight to the team conversation. They gather everyone, put sticky notes on a wall, and try to co-create something from scratch.</p>
         <p style={{ fontFamily: bf, fontSize: "17px", color: C.med, lineHeight: 1.8, marginBottom: "24px" }}>Sometimes it works. More often, you unconsciously dominate because you haven't examined your own assumptions, you defer to everything and end up with a framework you don't believe in, or mindsets and behaviors go unexamined and become a challenge down the line.</p>
@@ -742,7 +749,7 @@ const ResearchIntro = ({ onNext, onBack }) => (
         <h2 style={{ fontFamily: hf, fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 300, color: C.teal, lineHeight: 1.2, marginBottom: "12px" }}>There's Research to Shed Light<br />on Your <span style={{ fontWeight: 600 }}>Thinking</span></h2>
         <p style={{ fontFamily: bf, fontSize: "16px", color: C.med, lineHeight: 1.7, marginBottom: "24px" }}>Based on what you wrote, we've selected the research that's most relevant to your situation.</p>
       </FadeIn>
-      <FadeIn delay={400}><Video label="Before Part 2" sub="3 min" /></FadeIn>
+      <FadeIn delay={400}><YT id="w-07l2X3-Es" /></FadeIn>
       <FadeIn delay={600}>
         <div style={{ background: C.soft, padding: "18px 20px", borderLeft: `3px solid ${C.gold}`, marginBottom: "32px" }}>
           <p style={{ fontFamily: bf, fontSize: "14px", color: C.med, lineHeight: 1.6, margin: 0 }}>📓 After each principle, you'll capture your key takeaway. These feed directly into your session plan.</p>
@@ -1459,7 +1466,7 @@ const Complete = ({ onRestart }) => (
       <FadeIn delay={200}><p style={{ fontFamily: hf, fontSize: "14px", letterSpacing: "3px", textTransform: "uppercase", color: C.gold, marginBottom: "28px" }}>Journey Complete</p></FadeIn>
       <FadeIn delay={500}><h2 style={{ fontFamily: hf, fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 300, color: C.teal, lineHeight: 1.15, maxWidth: "560px", margin: "0 auto 24px" }}>You started this by reflecting on yourself.<br /><span style={{ fontWeight: 600 }}>Now build it together.</span></h2></FadeIn>
       <FadeIn delay={800}><p style={{ fontFamily: bf, fontSize: "16px", color: C.med, lineHeight: 1.7, maxWidth: "440px", margin: "0 auto 32px" }}>You have your reflections, the research, and a working session plan. Print it. Trust yourself in it.</p></FadeIn>
-      <FadeIn delay={1000}><Video label="A Final Word" sub="2 min" /></FadeIn>
+      <FadeIn delay={1000}><YT id="4NbPP93uLOo" /></FadeIn>
       <FadeIn delay={1200}>
         <p style={{ fontFamily: hf, fontSize: "13px", color: C.faded, letterSpacing: "1px", textTransform: "uppercase", marginTop: "24px", cursor: "pointer" }} onClick={onRestart}>← Return to Start</p>
       </FadeIn>
